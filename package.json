@@ -1,0 +1,24 @@
+{
+  "name": "lunapon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp-sass": "gulp sass",
+    "watch": "gulp sass:watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^4.0.1",
+    "yargs": "^12.0.1"
+  },
+  "dependencies": {
+    "readable-stream": "^2.3.3"
+  }
+}
