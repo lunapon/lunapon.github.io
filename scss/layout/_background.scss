@@ -1,0 +1,9 @@
+.l-background {
+  width: 200vw;
+  bottom: -4px;
+  position: fixed;
+  z-index: -1;
+  @include RWD(pad_md) {
+    position: absolute;
+  }
+}

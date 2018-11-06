@@ -1,0 +1,76 @@
+//RWD breakpoint
+@mixin RWD($media) {
+  @if $media == mobile_lg {
+    @media only screen and (min-width: $screen-mobile-lg-min) {
+      @content;
+    }
+  }
+  @else if $media == pad_md {
+    @media only screen and (min-width: $screen-pad-md-min) {
+      @content;
+    }
+  }
+  @else if $media == pad_lg {
+    @media only screen and (min-width: $screen-pad-lg-min) {
+      @content;
+    }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $screen-desktop-min) {
+      @content;
+    }
+  }  
+}
+
+//multiple line ellipsis
+@mixin multiple-line-ellipsis($lines) {
+  max-height: $line-height * $lines * 1em;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+//grid
+@mixin grid($col) {
+  $percent: 100% * $col / 12;
+  width: $percent;
+  max-width: $percent;
+  flex: 0 0 $percent;
+}
+
+//channel layout
+@mixin channel-layout($width) {
+  width: $width;
+  min-width: 0; 
+  max-width: $width;
+  flex: 0 0 $width;
+}
+
+//thumbnail aspect ratio (ex. 16:9)
+@mixin aspect-ratio($width, $height) {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+@mixin placeholder($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+}

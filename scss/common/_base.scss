@@ -1,0 +1,22 @@
+* {
+  outline: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  color: $color-foreground;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-content;
+  text-shadow: rgba(black,.5) 0 0 5px;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, $color-primary 0%,$color-secondary 60%,$color-secondary 100%) no-repeat;
+  @include RWD(pad_md) {
+    font-size: $font-size * 1.2;
+    overflow: hidden;
+  }
+}
+a {
+  text-decoration: none;
+}

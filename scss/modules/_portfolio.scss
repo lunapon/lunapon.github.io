@@ -1,0 +1,16 @@
+.md-portfolio {
+  justify-content: stretch;
+  display: flex;
+}
+.md-portfolio-item {
+  @include grid(12);
+  @include RWD(mobile_lg) {
+    @include grid(6);
+  }
+  @include RWD(pad_md) {
+    @include grid(4);
+  }
+  @include RWD(pad_lg) {
+    @include grid(3);
+  }
+}

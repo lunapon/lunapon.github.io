@@ -1,0 +1,22 @@
+.md-btn {
+  margin-top: 36px;
+  padding: 16px 36px;
+  color: $color-foreground;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: rgba(black,.3) 0 0 3px;
+  background: darken($color-primary,20);
+  border-radius: 3px;
+  box-shadow: rgba(black,.3) 0 3px 5px;
+  transition: all .3s ease-in-out;
+  display: inline-block;
+  &:hover {
+    background: darken($color-secondary,40);
+    box-shadow: rgba(black,.15) 0 5px 10px;
+  }
+  .fa {
+    &:first-child {
+      margin-right: 8px;
+    }
+  }
+}

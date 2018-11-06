@@ -1,0 +1,22 @@
+.md-thumbnail {
+  @include aspect-ratio(16,9);
+  margin: 16px;
+  background: white;
+  box-shadow: rgba(black,.3) 0 5px 10px;
+  border-radius: 5px;
+}
+.md-thumbnail-content {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+}
+.md-thumbnail-image {
+  min-width: 100%;
+  max-width: 100%;
+}

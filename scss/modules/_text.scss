@@ -1,0 +1,15 @@
+.md-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  font-family: $font-title;
+  margin-bottom: 24px;
+  @include RWD(pad_md) {
+    font-size: 4rem;
+    margin-bottom: 36px;
+  }
+}
+.md-article {
+  & + .md-article {
+    margin-top: 16px;
+  }
+}
