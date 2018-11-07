@@ -1,0 +1,57 @@
+.md-timeline {
+  list-style: none;
+}
+.md-timeline-item {
+  padding: 0 0 8px 16px;
+  position: relative;
+  @include RWD(pad_md) {
+    padding-left: 24px;
+  }
+  &:before, &:after {
+    content: "\0020";
+    position: absolute;
+  }
+  &:before {
+    top: 0;
+    bottom: 0;
+    left: 4px;
+    border-left: 1px solid #ccc;
+  }
+  &:after {
+    width: 9px;
+    height: 9px;
+    top: .5em;
+    left: 0;
+    background: $color-primary;
+    border-radius: 100%;
+  }
+  &:first-child {
+    &:before {
+      top: .5em;
+    }
+  }
+  &:last-child {
+    &:before {
+      height: 12px;
+    }
+  }
+  &.is-active {
+    &:after {
+      width: 16px;
+      height: 16px;
+      top: 4px;
+      left: -3px;
+      background: $color-secondary;
+      animation: dot_breath 3s infinite ease-in-out;
+    }
+  }
+}
+@keyframes dot_breath {
+  0%, 100% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(.5,.5);
+    background: darken($color-secondary,20);
+  }
+}

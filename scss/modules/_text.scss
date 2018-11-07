@@ -20,7 +20,11 @@
   font-size: 1.44rem;
   font-weight: 700;
   margin-bottom: 8px;
-  .md-paragraph + & {
+  .md-paragraph + &, .md-list + & {
     margin-top: 36px;
   }
+}
+.txt-note {
+  color: lighten($color-foreground,40);
+  font-size: 0.8rem;
 }
