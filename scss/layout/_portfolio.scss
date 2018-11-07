@@ -1,0 +1,10 @@
+.l-portfolio {
+  margin: 24px 0;
+  @include RWD(pad_md) {
+    margin: 48px 0;
+  }
+  .md-container {
+    flex-flow: row wrap;
+    display: flex;
+  }
+}

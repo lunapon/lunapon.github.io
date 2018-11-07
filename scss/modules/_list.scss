@@ -1,0 +1,12 @@
+.md-list {
+  list-style: none;
+}
+.md-list-item {
+  margin: 4px 0;
+  color: $color-foreground;
+  &:before {
+    content: "\2022";
+    color: lighten($color-foreground,40);
+    margin-right: 8px;
+  }
+}

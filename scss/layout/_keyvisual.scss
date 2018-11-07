@@ -1,0 +1,15 @@
+.l-keyvisual {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  background: #000;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  &.kv-detail {
+    height: 150px;
+  }
+}

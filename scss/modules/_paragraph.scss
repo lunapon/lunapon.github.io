@@ -1,0 +1,5 @@
+.md-paragraph {
+  & + .md-paragraph {
+    margin-top: 16px;
+  }
+}

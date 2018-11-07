@@ -1,0 +1,10 @@
+.l-header {
+  .md-container {
+    padding: 0 16px;
+    justify-content: space-between;
+    display: flex;
+    @include RWD(pad_md) {
+      padding: 8px 24px;
+    }
+  }
+}

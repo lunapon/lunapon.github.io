@@ -1,0 +1,7 @@
+.md-container {
+  width: 100%;
+  @include RWD(desktop) {
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+}

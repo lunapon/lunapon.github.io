@@ -1,0 +1,14 @@
+.md-nav {
+  font-size: 1.2rem;
+  font-weight: 600;
+  align-items: center;
+  display: flex;
+  .md-nav-item {
+    color: $color-foreground;
+    padding: 16px 24px;
+    transition: all .3s ease-in-out;
+    &:hover {
+      color: lighten($color-foreground,40);
+    }
+  }
+}

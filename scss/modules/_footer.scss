@@ -1,0 +1,16 @@
+.footer-sns {
+  text-align: center;
+}
+.footer-sns-item {
+  color: $color-foreground;
+  font-size: 1.44rem;
+  padding: 8px;
+  display: inline-block;
+  &:hover {
+    color: lighten($color-foreground,40);
+  }
+}
+.footer-copyright {
+  margin-top: 16px;
+  font-size: .8rem;
+}

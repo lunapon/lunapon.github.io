@@ -1,15 +1,26 @@
-.md-title {
-  font-size: 2.4rem;
+.txt-title {
+  color: #fff;
+  font-size: 2.2rem;
+  line-height: 1.2;
   font-weight: 800;
   font-family: $font-title;
-  margin-bottom: 24px;
+  z-index: 1;
   @include RWD(pad_md) {
     font-size: 4rem;
-    margin-bottom: 36px;
   }
 }
-.md-article {
-  & + .md-article {
+.txt-caption {
+  color: #fff;
+  z-index: 1;
+  .txt-title + & {
     margin-top: 16px;
+  }
+}
+.txt-subtitle {
+  font-size: 1.44rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  .md-paragraph + & {
+    margin-top: 36px;
   }
 }

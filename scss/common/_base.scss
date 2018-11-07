@@ -1,22 +1,28 @@
 * {
   outline: 0;
+  box-sizing: border-box;
 }
 body {
-  width: 100vw;
-  height: 100vh;
   color: $color-foreground;
   font-size: $font-size;
   line-height: $line-height;
   font-family: $font-content;
-  text-shadow: rgba(black,.5) 0 0 5px;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom, $color-primary 0%,$color-secondary 60%,$color-secondary 100%) no-repeat;
+  background: #f3f3f3;
   @include RWD(pad_md) {
     font-size: $font-size * 1.2;
-    overflow: hidden;
   }
 }
 a {
+  color: $color-primary;
   text-decoration: none;
+  &:hover {
+    color: $color-secondary;
+  }
+}
+::selection {
+  color: #fff;
+  background: darken($color-secondary,20);
+  text-shadow: none;
 }

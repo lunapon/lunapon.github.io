@@ -1,0 +1,10 @@
+.md-gallery {
+  margin: 24px 0;
+  @include RWD(pad_md) {
+    margin: 48px 0;
+  }
+}
+.md-gallery-item {
+  max-width: 100%;
+  margin: 4px auto;
+}

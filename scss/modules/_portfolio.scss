@@ -1,16 +1,70 @@
-.md-portfolio {
-  justify-content: stretch;
-  display: flex;
-}
 .md-portfolio-item {
   @include grid(12);
+  position: relative;
+  display: block;
   @include RWD(mobile_lg) {
     @include grid(6);
   }
-  @include RWD(pad_md) {
+  @include RWD(pad_lg) {
     @include grid(4);
   }
-  @include RWD(pad_lg) {
-    @include grid(3);
+  &:after {
+    content: "\0020";
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border: 5px solid transparent;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    z-index: 1;
+  }
+  &:hover {
+    &:after {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-color: $color-foreground;
+    }
+  }
+  .md-thumbnail {
+    @include aspect-ratio(4,3);
+    margin: 4px 0;
+    @include RWD(mobile_lg) {
+      margin: 8px;
+    }
+  }
+}
+.portfolio-caption {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 8px 16px;
+  color: #fff;
+  background: rgba(black,.5);
+  position: absolute;
+  @include RWD(pad_md) {
+    transform: translateY(100%);
+    .md-portfolio-item:hover & {
+      animation: caption_moveout .3s forwards ease-in-out;
+    }
+  }
+}
+.portfolio-caption-title {
+  font-size: 1.44rem;
+  font-weight: 700;
+}
+.portfolio-caption-comment {
+  .portfolio-caption-title + & {
+    margin-top: 4px;
+  }
+}
+@keyframes caption_moveout {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

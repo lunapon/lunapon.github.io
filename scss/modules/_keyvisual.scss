@@ -1,0 +1,29 @@
+.md-keyvisual {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: blur(2px);
+  opacity: .8;
+  position: absolute;
+  &.kv-home {
+    background-image: url(../images/head/head-home.png);
+  }
+  &.kv-strata {
+    background-image: url(../images/head/head-strata.png);
+  }
+  &.kv-tibame {
+    background-image: url(../images/head/head-tibame.png);
+  }
+  &.kv-asap {
+    background-image: url(../images/head/head-asap.png);
+  }
+  &.kv-uitox {
+    background-image: url(../images/head/head-uitox.png);
+  }
+}
