@@ -12,18 +12,21 @@
   opacity: .8;
   position: absolute;
   &.kv-home {
-    background-image: url(../images/head/head-home.png);
+    background-image: url(../images/head/home.png);
+  }
+  &.kv-working {
+    background-image: url(../images/head/working.png);
   }
   &.kv-strata {
-    background-image: url(../images/head/head-strata.png);
+    background-image: url(../images/head/strata.png);
   }
   &.kv-tibame {
-    background-image: url(../images/head/head-tibame.png);
+    background-image: url(../images/head/tibame.png);
   }
   &.kv-asap {
-    background-image: url(../images/head/head-asap.png);
+    background-image: url(../images/head/asap.png);
   }
   &.kv-uitox {
-    background-image: url(../images/head/head-uitox.png);
+    background-image: url(../images/head/uitox.png);
   }
 }

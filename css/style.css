@@ -39,11 +39,12 @@ a:hover{color:#5ABC2A}
 }
 .md-gallery-item{max-width:100%;margin:4px auto}
 .md-keyvisual{width:100%;height:100%;top:0;right:0;bottom:0;left:0;background-size:cover;background-repeat:no-repeat;background-position:center center;-webkit-filter:blur(2px);filter:blur(2px);opacity:.8;position:absolute}
-.md-keyvisual.kv-home{background-image:url(../images/head/head-home.png)}
-.md-keyvisual.kv-strata{background-image:url(../images/head/head-strata.png)}
-.md-keyvisual.kv-tibame{background-image:url(../images/head/head-tibame.png)}
-.md-keyvisual.kv-asap{background-image:url(../images/head/head-asap.png)}
-.md-keyvisual.kv-uitox{background-image:url(../images/head/head-uitox.png)}
+.md-keyvisual.kv-home{background-image:url(../images/head/home.png)}
+.md-keyvisual.kv-working{background-image:url(../images/head/working.png)}
+.md-keyvisual.kv-strata{background-image:url(../images/head/strata.png)}
+.md-keyvisual.kv-tibame{background-image:url(../images/head/tibame.png)}
+.md-keyvisual.kv-asap{background-image:url(../images/head/asap.png)}
+.md-keyvisual.kv-uitox{background-image:url(../images/head/uitox.png)}
 .md-list{list-style:none}
 .md-list-item{margin:4px 0;color:#222}
 .md-list-item:before{content:"\2022";color:#888;margin-right:8px}
@@ -63,7 +64,7 @@ a:hover{color:#5ABC2A}
 @media only screen and (min-width: 600px){.md-portfolio-item .md-thumbnail{margin:8px}
 }
 .portfolio-caption{right:0;bottom:0;left:0;padding:8px 16px;color:#fff;background:rgba(0,0,0,0.5);position:absolute}
-@media only screen and (min-width: 768px){.portfolio-caption{-webkit-transform:translateY(100%);transform:translateY(100%)}
+@media only screen and (min-width: 1025px){.portfolio-caption{-webkit-transform:translateY(100%);transform:translateY(100%)}
 .md-portfolio-item:hover .portfolio-caption{-webkit-animation:caption_moveout .3s forwards ease-in-out;animation:caption_moveout .3s forwards ease-in-out}
 }
 .portfolio-caption-title{font-size:1.44rem;font-weight:700}
@@ -82,5 +83,5 @@ a:hover{color:#5ABC2A}
 .txt-subtitle{font-size:1.44rem;font-weight:700;margin-bottom:8px}
 .md-paragraph+.txt-subtitle{margin-top:36px}
 .md-thumbnail-content{top:0;left:0;right:0;bottom:0;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;overflow:hidden;position:absolute;display:-webkit-box;display:-ms-flexbox;display:flex}
-.md-thumbnail-image{min-width:100%;max-width:100%}
+.md-thumbnail-image{min-height:100%;max-height:100%}
 

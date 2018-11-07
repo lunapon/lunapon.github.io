@@ -44,7 +44,7 @@
   color: #fff;
   background: rgba(black,.5);
   position: absolute;
-  @include RWD(pad_md) {
+  @include RWD(desktop) {
     transform: translateY(100%);
     .md-portfolio-item:hover & {
       animation: caption_moveout .3s forwards ease-in-out;
