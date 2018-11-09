@@ -11,6 +11,7 @@ body{color:#222;font-size:14px;line-height:1.4;font-family:"Open Sans","Microsof
 }
 a{color:#49A8FB;text-decoration:none}
 a:hover{color:#5ABC2A}
+::-moz-selection{color:#fff;background:#326917;text-shadow:none}
 ::selection{color:#fff;background:#326917;text-shadow:none}
 .l-header .md-container{padding:0 16px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;display:-webkit-box;display:-ms-flexbox;display:flex}
 @media only screen and (min-width: 768px){.l-header .md-container{padding:8px 24px}
@@ -42,6 +43,7 @@ a:hover{color:#5ABC2A}
 .md-keyvisual.kv-about{background-image:url(../images/shareimg.jpg)}
 .md-keyvisual.kv-working{background-image:url(../images/head/working.png)}
 .md-keyvisual.kv-strata{background-image:url(../images/head/strata.png)}
+.md-keyvisual.kv-np{background-image:url(../images/head/np.png)}
 .md-keyvisual.kv-tibame{background-image:url(../images/head/tibame.png)}
 .md-keyvisual.kv-asap{background-image:url(../images/head/asap.png)}
 .md-keyvisual.kv-uitox{background-image:url(../images/head/uitox.png)}
