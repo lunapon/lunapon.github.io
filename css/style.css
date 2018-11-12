@@ -13,7 +13,7 @@ a{color:#49A8FB;text-decoration:none}
 a:hover{color:#5ABC2A}
 ::-moz-selection{color:#fff;background:#326917;text-shadow:none}
 ::selection{color:#fff;background:#326917;text-shadow:none}
-.l-header .md-container{padding:0 16px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;display:-webkit-box;display:-ms-flexbox;display:flex}
+.l-header .md-container{padding:0 16px;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex}
 @media only screen and (min-width: 768px){.l-header .md-container{padding:8px 24px}
 }
 .l-keyvisual{width:100%;height:300px;text-align:center;background:#000;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;display:-webkit-box;display:-ms-flexbox;display:flex;overflow:hidden;position:relative}
@@ -64,6 +64,7 @@ a:hover{color:#5ABC2A}
 .md-list-item:before{content:"\2022";color:#888;margin-right:8px}
 .md-list-header{color:#888;font-size:1.2rem;font-style:italic}
 .md-list-item+.md-list-header{margin-top:16px}
+.md-logo{width:50px}
 .md-nav{font-size:1.2rem;font-weight:600;-webkit-box-align:center;-ms-flex-align:center;align-items:center;display:-webkit-box;display:-ms-flexbox;display:flex}
 .md-nav .md-nav-item{color:#222;padding:16px 24px;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out}
 .md-nav .md-nav-item:hover{color:#888}
