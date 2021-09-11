@@ -43,12 +43,12 @@ function arrayToProduct(id, sheetData, sheet) {
 
 //import data to HTML
 $(document).ready(function() {
-  for (var i = 0; i <= categoryCaption.length; i++) {
+  for (var i = 1; i <= categoryCaption.length; i++) {
     (function(i) {
       var rowId = '#productlist_' + i;
       $.ajax({
         type: 'GET',
-        url: 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + (i + 1) + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY',
+        url: 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + i + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY',
         dataType: 'json',
         success: function(data) {
           console.log(data);
