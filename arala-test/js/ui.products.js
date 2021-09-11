@@ -41,7 +41,7 @@ $(document).ready(function() {
       var rowId = '#productlist_' + i;
       $.ajax({
         type: 'GET',
-        url: 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' (i + 1) + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY',
+        url: 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + (i + 1) + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY',
         dataType: 'json',
         success: function(data) {
           //console.log(data);
