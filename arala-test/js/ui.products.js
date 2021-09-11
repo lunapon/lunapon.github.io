@@ -4,7 +4,12 @@
 
 //data instructures
 function arrayToProduct(id, sheetData, sheet) {
+  
+//刪除第一個陣列
+  sheetData.shift();
+
   var itemDiv = '';
+
   for (var i = 0; i < sheetData.length; i++) {
     var name = sheetData[0];
     var image = sheetData[1];
@@ -31,7 +36,9 @@ function arrayToProduct(id, sheetData, sheet) {
     //end
     itemDiv += '</div></figure>';
   }
+
   $(id).html(itemDiv);
+
 };
 
 //import data to HTML
@@ -44,8 +51,7 @@ $(document).ready(function() {
         url: 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + (i + 1) + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY',
         dataType: 'json',
         success: function(data) {
-          //console.log(data);
-          data.shift();
+          console.log(data);
           arrayToProduct(rowId, data, i);
           jumpToCategory();
         },
