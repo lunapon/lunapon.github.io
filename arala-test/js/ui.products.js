@@ -60,7 +60,7 @@ $(document).ready(function() {
           console.log(data);
       
           // 刪除第一個陣列
-          data.shift();
+          //data.shift();
 
           arrayToProduct(rowId, data.values, i);
           jumpToCategory();
