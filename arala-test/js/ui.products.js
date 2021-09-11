@@ -5,8 +5,8 @@
 //data instructures
 function arrayToProduct(id, sheetData, sheet) {
   
-//刪除第一個陣列
-  sheetData.shift();
+  //刪除第一個陣列
+  //sheetData.shift();
 
   var itemDiv = '';
 
