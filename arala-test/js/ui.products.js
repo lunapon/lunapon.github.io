@@ -47,24 +47,29 @@ $(document).ready(function() {
 
   for (var i = 1; i <= categoryCaption.length; i++) {
 
-    var rowId = '#productlist_' + i;
+    (function(i) {
 
-    const uri = 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + i + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY';
+      var rowId = '#productlist_' + i;
+
+      const uri = 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + i + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY';
       
-    fetch(uri)
-      .then(res => res.json())
-      .then(res => {
-        const data = res.values;
-        console.log(data);
+      fetch(uri)
+        .then(res => res.json())
+        .then(res => {
+          const data = res.values;
+          console.log(data);
       
-        // 刪除第一個陣列
-        data.shift();
+          // 刪除第一個陣列
+          data.shift();
 
-        arrayToProduct(rowId, data.values, i);
-        jumpToCategory();
+          arrayToProduct(rowId, data.values, i);
+          jumpToCategory();
 
-      })
-  }
+        });
+
+    });
+
+  };
 
 });
 
