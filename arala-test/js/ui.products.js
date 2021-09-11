@@ -2,7 +2,9 @@
  * Import Google Sheet
  * -------------------------------------------- */
 
+
 //data instructures
+
 function arrayToProduct(id, sheetData, sheet) {
 
   var itemDiv = '';
@@ -38,42 +40,55 @@ function arrayToProduct(id, sheetData, sheet) {
 
 };
 
+
 //import data to HTML
+
 $(document).ready(function() {
+
   for (var i = 1; i <= categoryCaption.length; i++) {
-    (function(i) {
 
-      var rowId = '#productlist_' + i;
+    var rowId = '#productlist_' + i;
 
-      const uri = 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + i + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY';
+    const uri = 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + i + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY';
       
-      fetch(uri)
-        .then(res => res.json())
-        .then(res => {
-          const data = res.values;
-          console.log(data);
+    fetch(uri)
+      .then(res => res.json())
+      .then(res => {
+        const data = res.values;
+        console.log(data);
       
-          // 刪除第一個陣列
-          data.shift();
+        // 刪除第一個陣列
+        data.shift();
 
-          arrayToProduct(rowId, data.values, i);
-          jumpToCategory();
+        arrayToProduct(rowId, data.values, i);
+        jumpToCategory();
 
-      });
-    });
-  };
+      })
+  }
+
 });
 
+
 //scroll to specific category by url hash when data loaded
+
 var windowHash;
 var headerHeight = $('.l-header').height();
+
 function jumpToCategory() {
+
   if (window.location.hash) {
+
     windowHash = window.location.hash;
+
     setTimeout(function() {
+
       $('html, body').animate({
+
         scrollTop: $(windowHash).offset().top - headerHeight - 8
+
       }, 500);
+
     }, 1500);
+
   }
 }
