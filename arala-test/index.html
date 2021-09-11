@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css" media="screen"/>
+    <link rel="stylesheet" href="style.min.css" media="screen"/>
+  </head>
+  <body>
+    <div class="text-center">
+      <h1>Contacts</h1>
+    </div>
+    <hr/>
+    <section class="js-append-card"></section>
+    <script>
+      const uri = 'https://sheets.googleapis.com/v4/spreadsheets/1Riz-hwF9kZQ_FVhG4mgyQPmkOAsf-9FiQbLsw6DlT-Y/values/Male?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY';
+      
+      fetch(uri)
+        .then(res => res.json())
+        .then(res => {
+          const data = res.values;
+          console.log(data);
+      
+          // 刪除第一個陣列
+          data.shift();
+      
+          Array.prototype.forEach.call(data, d => {
+            let Card = `
+              <div class="card">
+                <div class="avatar">
+                  <img src="${d[1]}">
+                </div>
+                <div class="text-center">
+                  <h4>${d[0]}</h4>
+                  <p>${d[3]}</p>
+                  <a href="">${d[2]}</a>
+                </div>
+              </div>`;
+            
+            document.querySelector('.js-append-card').insertAdjacentHTML('beforeend', Card);
+          })
+        })
+    </script>
+  </body>
+</html>
