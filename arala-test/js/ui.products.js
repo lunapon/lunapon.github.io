@@ -30,7 +30,7 @@ function arrayToProduct(id, sheetData, sheet) {
     itemDiv += '</figcaption>';
     //end
     itemDiv += '</div></figure>';
-  };
+  }
   $(id).html(itemDiv);
 };
 
