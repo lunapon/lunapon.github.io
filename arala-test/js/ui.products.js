@@ -62,7 +62,7 @@ $(document).ready(function() {
           // 刪除第一個陣列
           //data.shift();
 
-          arrayToProduct(rowId, data.values, i);
+          arrayToProduct(rowId, data, i);
           jumpToCategory();
 
         });
