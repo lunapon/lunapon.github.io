@@ -10,12 +10,12 @@ function arrayToProduct(id, sheetData, sheet) {
   var itemDiv = '';
 
   for (var i = 1; i < sheetData.length; i++) {
-    var name = sheetData[(i - 1)][0];
-    var image = sheetData[(i - 1)][1];
-    var link = sheetData[(i - 1)][2];
-    var lowprice = sheetData[(i - 1)][3].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    var highprice = sheetData[(i - 1)][4].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    var tag = sheetData[(i - 1)][5];
+    var name = sheetData[(i + 1)][0];
+    var image = sheetData[(i + 1)][1];
+    var link = sheetData[(i + 1)][2];
+    var lowprice = sheetData[(i + 1)][3].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    var highprice = sheetData[(i + 1)][4].toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    var tag = sheetData[(i + 1)][5];
     //HTML
     itemDiv += '<a id="product' + sheet + '-' + i + '"></a>';
     itemDiv += '<figure class="product col-6 col-md-4 col-lg-2 px-1"><div class="card">';
