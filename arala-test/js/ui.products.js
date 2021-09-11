@@ -4,9 +4,6 @@
 
 //data instructures
 function arrayToProduct(id, sheetData, sheet) {
-  
-  //刪除第一個陣列
-  //sheetData.shift();
 
   var itemDiv = '';
 
@@ -35,7 +32,7 @@ function arrayToProduct(id, sheetData, sheet) {
     itemDiv += '</figcaption>';
     //end
     itemDiv += '</div></figure>';
-  }
+  };
 
   $(id).html(itemDiv);
 
@@ -45,21 +42,25 @@ function arrayToProduct(id, sheetData, sheet) {
 $(document).ready(function() {
   for (var i = 1; i <= categoryCaption.length; i++) {
     (function(i) {
+
       var rowId = '#productlist_' + i;
-      $.ajax({
-        type: 'GET',
-        url: 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + i + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY',
-        dataType: 'json',
-        success: function(data) {
+
+      const uri = 'https://sheets.googleapis.com/v4/spreadsheets/1jRcyG6Xh2-YjlsJ4k4Ta9bkPdadz6kPgggx6QUdNwmo/values/List' + i + '?alt=json&key=AIzaSyAKEO8ydK_jNlqdOZjHCa4xgt-5RxBwkIY';
+      
+      fetch(uri)
+        .then(res => res.json())
+        .then(res => {
+          const data = res.values;
           console.log(data);
+      
+          // 刪除第一個陣列
+          data.shift();
+
           arrayToProduct(rowId, data.values, i);
           jumpToCategory();
-        },
-        error: function() {
-          $(rowId).html('<div class="text-center w-100">無任何相關商品</div>');
-        }
+
       });
-    })(i);
+    });
   };
 });
 
