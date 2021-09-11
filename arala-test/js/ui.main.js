@@ -1,10 +1,12 @@
 var pageTitle, pageBgColor;
 var categoryCaption = [];
 
+
 jQuery(function ($) {
 
   //init
   $(document).ready(function () {
+
     //page title
     document.title = pageTitle;
 
@@ -25,7 +27,9 @@ jQuery(function ($) {
 
   //create category container
   function categoryContainer() {
+
     var containerDiv = '';
+
     for (var i = 1; i <= categoryCaption.length; i++) {
       containerDiv += '<a id="list' + i + '"></a>';
       containerDiv += '<div class="products py-3" style="background-image: url(images/bg-list' + i + '.png">';
@@ -34,6 +38,8 @@ jQuery(function ($) {
       containerDiv += '<div class="product-list row" id="productlist_' + i + '"></div>';
       containerDiv += '</div></div>';
     };
+
     return containerDiv;
+
   };
 });
